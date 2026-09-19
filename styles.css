@@ -22,3 +22,46 @@ section{padding:90px 5vw}.manifesto{display:grid;grid-template-columns:.9fr 1.1f
 footer{padding:34px 5vw 48px;display:grid;grid-template-columns:1fr auto auto;gap:30px;align-items:end;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}footer small{display:block;margin-top:3px}
 @media(max-width:1000px){.nav{display:none;position:absolute;top:84px;left:0;right:0;padding:20px 5vw;background:white;flex-direction:column;align-items:flex-start}.nav.open{display:flex}.menu-toggle{display:block}.hero,.manifesto,.travel-layout,.men,.fortune{grid-template-columns:1fr}.hero-art{min-height:540px}.collection-grid{grid-template-columns:repeat(2,1fr)}.detail-grid,.materials{grid-template-columns:repeat(3,1fr)}.men-looks{grid-template-columns:repeat(3,1fr)}.preview{grid-template-columns:1fr}.form-note{grid-column:auto}footer{grid-template-columns:1fr}}
 @media(max-width:650px){section{padding:64px 5vw}.hero{padding-top:50px}.hero-art{min-height:430px}.art-title{font-size:50px}.collection-grid{grid-template-columns:1fr}.collection-card{min-height:450px}.manifesto-grid{grid-template-columns:1fr}.detail-grid,.materials{grid-template-columns:repeat(2,1fr)}.men-looks{grid-template-columns:1fr}.men-look{min-height:340px}.section-head{display:block}.color-story{grid-template-columns:1fr}.preview{margin:20px 3vw 50px}.preview-form{display:grid}.fortune-frame{min-height:560px;padding:54px 20px}.fortune-frame h2{font-size:52px}}
+
+
+/* ===== MEMO WEBSITE V3 ===== */
+.pattern-card{background:linear-gradient(145deg,#ffc2d7,#d8c6f3 46%,#bcd8f3 72%,#f4df91)}
+.hero-cat-img{position:absolute;width:72%;left:12%;top:12%;opacity:.92}
+.full-art{width:100%;height:100%;object-fit:cover;opacity:.82}
+.compact-hero{min-height:760px}
+.collection-card.yellow{background:linear-gradient(180deg,#fff3c6,#f3dc83)}
+.mens-card{background:linear-gradient(145deg,#bcd5f2,#f4e3b8 42%,#c1dfce 72%,#f6bfd2)}
+.variable-cats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.cat-token{aspect-ratio:1;border-radius:28px;display:grid;place-items:center;font:600 13px var(--sans);letter-spacing:.16em;position:relative;overflow:hidden}
+.cat-token:before{content:"";width:52%;height:40%;border:3px solid #211923;border-radius:45% 45% 36% 36%;position:absolute;top:22%}
+.cat-token:after{content:"⌒  ·  ·  ⌒";font-size:17px;position:absolute;top:32%;letter-spacing:3px}
+.cat-token.pink{background:#f6bfd2}.cat-token.yellow{background:#f4df91}.cat-token.blue{background:#bcd8f3}.cat-token.mint{background:#c1dfce}.cat-token.lilac{background:#d6c7f2}.cat-token.coral{background:#f3b3a2}
+.fortune-body{background:radial-gradient(circle at 60% 10%,#fff6e8,#fff7fa 35%,#f7e3ea 78%)}
+.fortune-page{padding:7vh 5vw 10vh;display:grid;grid-template-columns:1fr .7fr;gap:5vw;align-items:center}
+.fortune-large{padding:12px;border-radius:34px;background:linear-gradient(135deg,#d9a54c,#ffd789,#e9a87d,#f5c7d7);box-shadow:var(--shadow)}
+.rune-frame{min-height:790px}
+.rune-frame h1{font:600 clamp(64px,8vw,116px)/.9 var(--serif);color:#b64159;margin:16px 0}
+.fortune-side h2{font:600 clamp(44px,5vw,78px)/1 var(--serif);margin:18px 0 24px}
+.fortune-side p{color:var(--muted);line-height:1.7;margin-bottom:28px}
+
+/* commerce */
+.shop-tools{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:0 5vw 28px;position:sticky;top:84px;z-index:12;background:rgba(255,253,251,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filter-btn,.bag-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px;font:600 11px var(--sans);cursor:pointer}
+.filter-btn.active{background:var(--ink);color:#fff}.bag-btn{border-color:var(--ink)}
+.commerce-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:30px 5vw 90px}
+.sku-card{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff;transition:.25s ease;box-shadow:0 10px 40px rgba(88,54,73,.05)}
+.sku-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.sku-art{aspect-ratio:4/5;background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 88%,white),white);position:relative;overflow:hidden}
+.sku-art:before{content:"";position:absolute;inset:12% 25% 19%;background:rgba(255,255,255,.65);border-radius:40% 40% 18% 18%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.8)}
+.sku-art:after{content:"MEMO  ♡";position:absolute;left:18px;bottom:16px;font:600 11px var(--sans);letter-spacing:.16em}
+.sku-meta{padding:16px}.sku-meta small{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}.sku-meta h3{font:500 22px var(--serif);margin:6px 0}.sku-meta p{font-size:12px;line-height:1.45;color:var(--muted);min-height:34px}
+.sku-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}.sku-row strong{font-size:13px}.quick-add{border:0;background:var(--ink);color:white;border-radius:999px;padding:9px 13px;font:600 10px var(--sans);cursor:pointer}
+.product-dialog{border:0;border-radius:28px;padding:0;max-width:720px;width:92%;box-shadow:0 40px 140px rgba(38,23,33,.3)}.product-dialog::backdrop{background:rgba(29,20,29,.45);backdrop-filter:blur(4px)}
+.dialog-inner{display:grid;grid-template-columns:.8fr 1.2fr}.dialog-art{min-height:430px;background:var(--accent);position:relative}.dialog-art:before{content:"";position:absolute;inset:13% 24%;background:rgba(255,255,255,.58);border-radius:42% 42% 20% 20%}
+.dialog-copy{padding:34px}.dialog-close{float:right;border:0;background:#f4eff2;border-radius:50%;width:34px;height:34px;cursor:pointer}.dialog-copy h2{font:500 38px var(--serif);margin:20px 0 8px}.dialog-copy p{color:var(--muted);line-height:1.5}.option-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:18px}.option-group{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.option{border:1px solid var(--line);border-radius:999px;padding:8px 10px;font-size:11px;cursor:pointer;background:white}.option.selected{background:var(--ink);color:#fff}.dialog-buy{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
+.cart-drawer{position:fixed;z-index:50;top:0;right:0;width:min(440px,94vw);height:100vh;background:#fff;transform:translateX(105%);transition:.3s ease;box-shadow:-20px 0 70px rgba(30,20,30,.18);padding:24px;display:flex;flex-direction:column}
+.cart-open .cart-drawer{transform:translateX(0)}.cart-overlay{position:fixed;z-index:49;inset:0;background:rgba(30,20,30,.3);opacity:0;pointer-events:none;transition:.3s}.cart-open .cart-overlay{opacity:1;pointer-events:auto}
+.cart-head{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}.cart-head h2{font:500 34px var(--serif)}.cart-close{border:0;background:none;font-size:26px;cursor:pointer}
+.cart-items{overflow:auto;flex:1}.cart-line{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line)}.cart-line b{display:block;font:500 16px var(--serif)}.cart-line small{font-size:10px;color:var(--muted)}.cart-line strong{font-size:12px}.cart-qty{display:flex;align-items:center;gap:7px}.cart-qty button{width:25px;height:25px;border:1px solid var(--line);border-radius:50%;background:white;cursor:pointer}.cart-foot{padding-top:16px;border-top:1px solid var(--line)}.cart-total{display:flex;justify-content:space-between;font-weight:700;margin-bottom:14px}.checkout-btn{width:100%;border:0;border-radius:999px;padding:15px;background:var(--ink);color:#fff;font-weight:700;cursor:pointer}.empty-cart{color:var(--muted);font-style:italic}
+@media(max-width:1000px){.variable-cats{grid-template-columns:repeat(3,1fr)}.fortune-page{grid-template-columns:1fr}.commerce-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.variable-cats{grid-template-columns:repeat(2,1fr)}.commerce-grid{grid-template-columns:1fr}.shop-tools{top:84px;display:block}.bag-btn{margin-top:10px}.dialog-inner{grid-template-columns:1fr}.dialog-art{min-height:250px}}
