@@ -50,3 +50,24 @@ Open `index.html` directly in a browser.
 ---
 
 MEMO / Memory of the Universe
+
+
+## Website V3 Status
+
+The MEMO official site is now structured as a direct brand + commerce prototype:
+
+- `index.html` — Home / 24-hour wardrobe / Season 01 / Design DNA
+- `shop.html` — 30+ SKU catalog, filters, color/size selector, local cart
+- `travel.html` — business-leisure capsule wardrobe
+- `men.html` — Mediterranean-inspired MEMO menswear
+- `fortune.html` — collectible Fortune / 桃花双开 world
+- `world.html` — brand manifesto + Variable Cat
+- `catalog.js` — product data
+- `cart.js` — persistent prototype cart
+- `assets/` — canonical MEMO cat / pattern / favicon SVG
+- `.github/workflows/pages.yml` — GitHub Pages deployment workflow
+
+**Source-of-truth rule:** this GitHub repository is the canonical platform for the MEMO website and brand docs.
+
+### GitHub Pages note
+The workflow is present and triggers correctly, but the repository currently stops at the GitHub “Setup Pages” step. This is a repository/account Pages setting rather than a website-code error. See `GITHUB_PAGES_SETUP.md`.
