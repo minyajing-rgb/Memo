@@ -1,46 +1,57 @@
-# MEMO Website Deployment
+# MEMO Production Deployment
 
-## Current state
-- Static website is ready in the repository root.
-- Main entry: `index.html`
-- Shop page: `shop.html`
-- Travel page: `travel.html`
-- Shared styling: `styles.css`
-- Shared interaction: `script.js`
+## Hosting decision
 
-## Recommended deployment
-Vercel static deployment from the GitHub repository `minyajing-rgb/Memo`.
+**Source of truth:** GitHub private repository `minyajing-rgb/Memo`  
+**Production hosting:** Vercel  
+**Reason:** keep the code private while still getting automatic deploys and custom-domain support.
 
-### Build settings
+## Repository status
+
+The production-ready static website is already in the repository root:
+
+- `index.html` — Home
+- `shop.html` — Catalog + filters + size/color selection + cart
+- `travel.html` — Travel capsule
+- `men.html` — MEMO Men
+- `fortune.html` — Fortune Edition
+- `world.html` — Our World
+- `styles.css` — shared design system
+- `script.js` — shared navigation
+- `catalog.js` — product data
+- `cart.js` — local cart
+- `assets/` — MEMO SVG assets
+- `vercel.json` — Vercel config
+
+## Vercel import
+
+Import this GitHub repository directly in Vercel:
+
+**Repository:** `minyajing-rgb/Memo`
+
+Recommended settings:
 - Framework preset: **Other**
-- Root directory: repository root
-- Build command: none
-- Output directory: repository root
+- Root directory: **./**
+- Build command: **None**
+- Output directory: **./**
+- Production branch: **main**
 
-## Production before launch
-1. Replace CSS art placeholders with final campaign/product photography.
-2. Connect domain.
-3. Add analytics.
-4. Add email capture backend / CRM.
-5. Add commerce:
-   - SKU variants
-   - size selector
-   - cart
-   - Stripe
-   - order confirmation
-6. Add legal:
-   - Privacy Policy
-   - Terms
-   - Shipping / Returns
-   - Contact
+After import, every push to `main` will redeploy automatically.
 
-## Suggested routes
-- /
-- /shop
-- /travel
-- /world
-- /fortune
-- /men
-- /journal
+## Custom domain
 
-The current build is a visual brand + product prototype, not yet a transactional store.
+After the project is live:
+1. Add the chosen production domain in **Vercel → Project → Settings → Domains**.
+2. Update DNS at the domain provider using the exact Vercel records shown there.
+3. Keep GitHub as the source of truth; do not move the site to another builder.
+
+## Commerce status
+
+The current site includes a working front-end catalog and cart prototype. It does **not** charge money yet.
+
+Next production integrations:
+- Stripe Checkout / Payment Links
+- CRM / email capture
+- Analytics
+- inventory source
+- privacy / terms / shipping / returns
