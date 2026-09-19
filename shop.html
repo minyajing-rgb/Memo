@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MEMO Shop — Good Mood Anywhere</title>
+<meta name="theme-color" content="#ff5c9d"><meta name="description" content="Shop MEMO — playful premium inner-to-outer, lounge, travel, business-to-bar, swim and objects.">
+<title>MEMO Shop — Wear Your Good Mood</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
@@ -10,62 +12,112 @@
 .shop-hero{padding:9vh 5vw 5vh;display:grid;grid-template-columns:1fr .9fr;gap:4vw;align-items:end}
 .shop-hero h1{font-size:clamp(60px,8vw,120px)}.shop-hero p{max-width:640px;color:var(--muted);line-height:1.65}
 .shop-banner{min-height:420px;border-radius:34px;background:linear-gradient(135deg,#ffd3e3,#cfc0ef 38%,#b9d6f0 66%,#f3dd8b);position:relative;overflow:hidden;box-shadow:var(--shadow)}
-.shop-banner:before{content:"MEMO";position:absolute;inset:auto 7% 9%;font:600 90px var(--serif);letter-spacing:.03em}
+.shop-banner img{position:absolute;width:66%;right:8%;top:8%;opacity:.8}.shop-banner:before{content:"MEMO";position:absolute;inset:auto 7% 9%;font:600 90px var(--serif);letter-spacing:.03em}
 .shop-banner:after{content:"same cat · different mood · more places";position:absolute;right:8%;top:10%;font:italic 20px var(--serif)}
-.category-strip{padding:0 5vw 30px;display:flex;gap:10px;flex-wrap:wrap}.category-strip a{padding:10px 15px;border:1px solid var(--line);border-radius:999px;background:white;font-size:12px}
-.product-section{padding:40px 5vw 90px}.product-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}.product-head h2{font-size:48px}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.product{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#fff}.product-art{aspect-ratio:4/5;position:relative;background:var(--bg)}
-.product-art:before{content:"";position:absolute;left:23%;right:23%;top:10%;bottom:16%;border-radius:36% 36% 20% 20%;background:rgba(255,255,255,.63)}
-.product-art:after{content:"✦";position:absolute;right:12%;top:10%;font-size:24px;color:rgba(37,29,43,.45)}
-.product-copy{padding:16px}.product-copy h3{font-size:21px;margin-bottom:5px}.product-copy p{margin:0;color:var(--muted);font-size:12px;line-height:1.45}.price{display:flex;justify-content:space-between;margin-top:12px;font-weight:700;font-size:12px}
-.note{font-size:11px;color:var(--muted)}.shop-cta{margin:0 5vw 80px;padding:42px;border-radius:28px;background:linear-gradient(120deg,#ff6ca8,#ffd0df 44%,#d5c5f0);display:flex;justify-content:space-between;gap:30px;align-items:center}
-@media(max-width:900px){.shop-hero{grid-template-columns:1fr}.product-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.product-grid{grid-template-columns:1fr}.shop-cta{display:block}}
+.shop-intro{padding:22px 5vw 16px;display:flex;justify-content:space-between;gap:30px;align-items:end}.shop-intro h2{font:500 clamp(38px,5vw,68px)/1 var(--serif)}.shop-intro p{max-width:520px;color:var(--muted);line-height:1.6}
+@media(max-width:900px){.shop-hero{grid-template-columns:1fr}.shop-intro{display:block}}
 </style>
 </head>
 <body>
 <header class="site-header">
 <a class="brand" href="index.html"><span class="brand-word">MEMO</span><span class="brand-sub">Memory of the Universe</span></a>
-<nav class="nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="travel.html">Travel</a><a href="index.html#details">Design DNA</a><a href="index.html#fortune">Fortune</a></nav>
+<button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+<nav class="nav"><a href="index.html">Home</a><a href="shop.html">Shop</a><a href="travel.html">Travel</a><a href="men.html">Men</a><a href="fortune.html">Fortune</a><a href="world.html">Our World</a><button class="bag-btn" data-open-cart>Bag <span data-cart-count>0</span></button></nav>
 </header>
+
 <main>
 <section class="shop-hero">
-<div><div class="eyebrow">SEASON 01 · GOOD MOOD ANYWHERE</div><h1>Shop the<br><em>MEMO world.</em></h1><p>One connected wardrobe for inside, outside, travel, work, resort and after-hours. Mix colors, moods and layers instead of buying isolated “occasion” outfits.</p></div>
-<div class="shop-banner"></div>
+<div><div class="eyebrow">SEASON 01 · 30+ PIECES</div><h1>Shop the<br><em>MEMO world.</em></h1><p>Not a pile of “occasion” products. One connected wardrobe for inside, outside, travel, work, resort and after-hours — designed to mix colors, moods and layers.</p></div>
+<div class="shop-banner"><img src="assets/memo-cat.svg" alt="MEMO cat"></div>
 </section>
-<div class="category-strip"><a href="#inner">Inner → Outer</a><a href="#lounge">Silk & Lounge</a><a href="#work">Business → Bar</a><a href="#travelwear">Travel</a><a href="#swim">Swim & Resort</a><a href="#objects">Objects</a></div>
 
-<section class="product-section" id="inner">
-<div class="product-head"><div><div class="eyebrow">INNER → OUTER</div><h2>Made to be seen.</h2></div><p class="note">Soft support · polished finish · real clothing proportions</p></div>
-<div class="product-grid">
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#ffd6e4,#f8aec7)"></div><div class="product-copy"><h3>Square Bra Tank</h3><p>Clean square neck, built-in support, subtle cat hardware.</p><div class="price"><span>Rose / Lilac / Cream</span><span>¥359</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#ece4ff,#c7b3ed)"></div><div class="product-copy"><h3>Asymmetric Cami</h3><p>One-shoulder line with detachable bow and polished trim.</p><div class="price"><span>Lilac / Sky</span><span>¥389</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#e6f3e9,#bcdcc8)"></div><div class="product-copy"><h3>Rib Bra Top</h3><p>Pointelle-rib knit with contrast edge and micro embroidery.</p><div class="price"><span>Mint / Cream</span><span>¥329</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#fff2e6,#f2d6ba)"></div><div class="product-copy"><h3>Soft Balconette</h3><p>Light structure, smoother underlayer, tiny charm fastening.</p><div class="price"><span>Champagne / Rose</span><span>¥399</span></div></div></article>
+<section class="shop-intro"><div><div class="eyebrow">GOOD MOOD ANYWHERE</div><h2>Choose a mood.<br>Build a life around it.</h2></div><p>Every piece carries at least one MEMO code: asymmetric line, contrast edge, tiny bow, cat hardware, micro embroidery, tactile texture or a travel-friendly construction detail.</p></section>
+
+<div class="shop-tools">
+  <div class="filters" data-filters></div>
+  <button class="bag-btn" data-open-cart>Shopping Bag · <span data-cart-count>0</span></button>
 </div>
-</section>
 
-<section class="product-section" id="lounge">
-<div class="product-head"><div><div class="eyebrow">SILK / LOUNGE</div><h2>Stay in. Step out.</h2></div></div>
-<div class="product-grid">
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#ffdce8,#f4bad1)"></div><div class="product-copy"><h3>Washable Silk Cami</h3><p>Bias cut, soft drape, unexpected contrast lining.</p><div class="price"><span>Rose / Champagne</span><span>¥459</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#dfe9ff,#b8cef1)"></div><div class="product-copy"><h3>Silk Shirt</h3><p>Hidden chest snap, shaped cuff and contrast piping.</p><div class="price"><span>Sky / Cream</span><span>¥659</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#eee7ff,#cdbcf0)"></div><div class="product-copy"><h3>Silk Pant</h3><p>Front-clean waistband, deep pocket, petite/regular length.</p><div class="price"><span>Lilac / Pearl</span><span>¥659</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#fff0e3,#f2cfc2)"></div><div class="product-copy"><h3>Robe Jacket</h3><p>Structured enough for breakfast, soft enough for bed.</p><div class="price"><span>Peach / Cream</span><span>¥759</span></div></div></article>
-</div>
-</section>
-
-<section class="product-section" id="work">
-<div class="product-head"><div><div class="eyebrow">BUSINESS → BAR</div><h2>One layer changes the mood.</h2></div></div>
-<div class="product-grid">
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#fff1f4,#eec9d5)"></div><div class="product-copy"><h3>Soft Tweed Jacket</h3><p>Clean body, one scalloped edge, cat button, removable feather cuff.</p><div class="price"><span>Blush / Cream</span><span>¥899</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#eef4ff,#cad8ef)"></div><div class="product-copy"><h3>City Denim</h3><p>Modern straight denim with asymmetric pocket and contrast tab.</p><div class="price"><span>Cloud Blue</span><span>¥599</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#fff3dd,#f2d58e)"></div><div class="product-copy"><h3>Short Tailored Skirt</h3><p>Sharp front line, comfortable back fit, minimal gold hardware.</p><div class="price"><span>Butter / Cream</span><span>¥529</span></div></div></article>
-<article class="product"><div class="product-art" style="--bg:linear-gradient(#f0e8ff,#cfbbee)"></div><div class="product-copy"><h3>After-Hours Slip</h3><p>Asymmetric drape, one signature bow, detachable jacket pairing.</p><div class="price"><span>Lilac / Rose</span><span>¥699</span></div></div></article>
-</div>
-</section>
-
-<section class="shop-cta"><div><div class="eyebrow">COMING NEXT</div><h2>Full commerce build</h2><p>Variant selector, size guide, cart, Stripe checkout, CRM and inventory will be connected after final SKU/sample confirmation.</p></div><a class="btn btn-primary" href="index.html#preview">Join Preview</a></section>
+<section class="commerce-grid" data-product-grid aria-live="polite"></section>
 </main>
+
+<dialog class="product-dialog" data-product-dialog>
+  <div class="dialog-inner">
+    <div class="dialog-art" data-dialog-art></div>
+    <div class="dialog-copy">
+      <button class="dialog-close" data-dialog-close aria-label="Close">×</button>
+      <small class="eyebrow" data-dialog-category></small>
+      <h2 data-dialog-name></h2>
+      <p data-dialog-copy></p>
+      <strong data-dialog-price></strong>
+      <span class="option-label">Color</span><div class="option-group" data-color-options></div>
+      <span class="option-label">Size</span><div class="option-group" data-size-options></div>
+      <div class="dialog-buy"><span class="note">Season 01 preview</span><button class="btn btn-primary" data-dialog-add>Add to Bag</button></div>
+    </div>
+  </div>
+</dialog>
+
+<div class="cart-overlay" data-close-cart></div>
+<aside class="cart-drawer" aria-label="Shopping bag">
+  <div class="cart-head"><h2>Your Bag</h2><button class="cart-close" data-close-cart>×</button></div>
+  <div class="cart-items" data-cart-items></div>
+  <div class="cart-foot"><div class="cart-total"><span>Total</span><span data-cart-total>¥0</span></div><button class="checkout-btn" data-checkout>Checkout Preview</button><p class="note">Payment is not charged in this prototype.</p></div>
+</aside>
+
 <footer><div><span class="brand-word">MEMO</span><small>Memory of the Universe</small></div><p>Wear · Dream · Work · Play · Travel · Be You</p><p>© 2026 MEMO</p></footer>
+
 <script src="script.js"></script>
+<script src="catalog.js"></script>
+<script src="cart.js"></script>
+<script>
+(() => {
+  const products=window.MEMO_PRODUCTS||[];
+  const grid=document.querySelector("[data-product-grid]");
+  const filters=document.querySelector("[data-filters]");
+  const dialog=document.querySelector("[data-product-dialog]");
+  const categories=["All",...new Set(products.map(p=>p.category))];
+  let active="All", selected=null, color=null, size=null;
+  const money=n=>"¥"+Number(n).toLocaleString("zh-CN");
+  function renderFilters(){
+    filters.innerHTML=categories.map(c=>`<button class="filter-btn ${c===active?"active":""}" data-filter="${c}">${c}</button>`).join("");
+    filters.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{active=b.dataset.filter;renderFilters();renderProducts()});
+  }
+  function renderProducts(){
+    const list=active==="All"?products:products.filter(p=>p.category===active);
+    grid.innerHTML=list.map(p=>`
+      <article class="sku-card" style="--accent:${p.accent}">
+        <button class="sku-art" aria-label="View ${p.name}" data-view="${p.id}" style="--accent:${p.accent};border:0;width:100%;cursor:pointer"></button>
+        <div class="sku-meta">
+          <small>${p.category} · ${p.id}</small>
+          <h3>${p.name}</h3>
+          <p>${p.mood}</p>
+          <div class="sku-row"><strong>${money(p.price)}</strong><button class="quick-add" data-view="${p.id}">Choose</button></div>
+        </div>
+      </article>`).join("");
+    grid.querySelectorAll("[data-view]").forEach(b=>b.onclick=()=>openProduct(b.dataset.view));
+  }
+  function options(root,items,value,setter){
+    root.innerHTML=items.map(x=>`<button class="option ${x===value?"selected":""}" type="button">${x}</button>`).join("");
+    [...root.children].forEach((b,i)=>b.onclick=()=>setter(items[i]));
+  }
+  function openProduct(id){
+    selected=products.find(p=>p.id===id); if(!selected)return;
+    color=selected.colors[0]; size=selected.sizes[0];
+    document.querySelector("[data-dialog-art]").style.setProperty("--accent",selected.accent);
+    document.querySelector("[data-dialog-art]").style.background=`linear-gradient(155deg,${selected.accent},#fff)`;
+    document.querySelector("[data-dialog-category]").textContent=selected.category+" · "+selected.id;
+    document.querySelector("[data-dialog-name]").textContent=selected.name;
+    document.querySelector("[data-dialog-copy]").textContent=selected.mood;
+    document.querySelector("[data-dialog-price]").textContent=money(selected.price);
+    drawOptions(); dialog.showModal();
+  }
+  function drawOptions(){
+    options(document.querySelector("[data-color-options]"),selected.colors,color,v=>{color=v;drawOptions()});
+    options(document.querySelector("[data-size-options]"),selected.sizes,size,v=>{size=v;drawOptions()});
+  }
+  document.querySelector("[data-dialog-close]").onclick=()=>dialog.close();
+  document.querySelector("[data-dialog-add]").onclick=()=>{window.MEMOCart.add(selected,color,size);dialog.close()};
+  renderFilters();renderProducts();
+})();
+</script>
 </body></html>
