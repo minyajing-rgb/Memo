@@ -40,6 +40,8 @@
     body.classList.add("cart-open");
   }
 
+  window.memoAddItem = addItem;
+
   document.querySelectorAll("[data-add]").forEach(btn => btn.addEventListener("click", () => addItem(btn.dataset.add, btn.dataset.price)));
   document.querySelectorAll("[data-open-cart]").forEach(btn => btn.addEventListener("click", () => body.classList.add("cart-open")));
   document.querySelectorAll("[data-close-cart]").forEach(btn => btn.addEventListener("click", () => body.classList.remove("cart-open")));
