@@ -1,0 +1,23 @@
+{
+  "release": "locked-20260920-r1",
+  "verified_url": "https://memo.saga1001.com",
+  "pages_deployment_commit": "47c4436c982b76a013a818487abd096f632bcef3",
+  "pages_deployment_run": 35493764110,
+  "source_artwork": "4e10bbe7-7fb1-40b3-9ca0-fbbb60d69e7b.png",
+  "source_dimensions": [1024, 1536],
+  "source_rgb_sha256": "8d72d82ed792d89d8c139e264c1681eedc82019d337f638564a2120ebd28d8ec",
+  "source_rgb_verified": true,
+  "native_lossless_assets": 20,
+  "browser": "Chromium 153.0.8010.12",
+  "desktop_viewport": [1440, 1000],
+  "mobile_viewport": [390, 844],
+  "pages_checked_desktop": 11,
+  "pages_checked_mobile": 6,
+  "broken_images": 0,
+  "horizontal_overflow": false,
+  "javascript_errors": [],
+  "verified_interactions": ["home filters", "category query and filter", "wishlist persistence", "search results and navigation", "correct product detail", "colour and size saved in bag", "quantity changes and totals", "bag persistence after reload", "travel scene tabs", "mobile menu", "checkout preview status", "newsletter not collecting data"],
+  "commerce_status": "Frontend collection preview. No payments or order backend enabled.",
+  "newsletter_status": "Not enabled. No email collection or false subscription success.",
+  "resolution_note": "Original selected pixels preserved. No claim of new 4K detail; small product crops retain the source composite's resolution."
+}
