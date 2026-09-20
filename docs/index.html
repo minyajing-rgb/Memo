@@ -4,43 +4,253 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>MEMO — Wear Your Good Mood</title>
-  <meta name="description" content="MEMO — Memory of the Universe. Playful-premium lingerie, lounge, swim, travel and lifestyle.">
-  <link rel="canonical" href="https://memo.saga100.com/">
-  <meta name="theme-color" content="#f8d5e1">
+  <meta name="description" content="MEMO — Memory of the Universe. Playful-premium lingerie, loungewear, travel, swim and lifestyle objects for a brighter day.">
+  <link rel="canonical" href="https://memo.saga1001.com/">
+  <meta name="theme-color" content="#ffd7e4">
   <meta property="og:title" content="MEMO — Wear Your Good Mood">
-  <meta property="og:description" content="Good outfits. Brighter days. Same cat, different mood.">
+  <meta property="og:description" content="Good Outfits. Brighter Days. Same Cat. Different Mood.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://memo.saga100.com/">
-  <meta property="og:image" content="https://memo.saga100.com/assets/homepage-visual.jpg">
+  <meta property="og:url" content="https://memo.saga1001.com/">
+  <meta property="og:image" content="https://memo.saga1001.com/assets/campaign/memo-01.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="page">
-    <section class="approved-home" aria-label="MEMO official homepage">
-      <img src="assets/homepage-visual.jpg" alt="MEMO pastel Mediterranean fashion homepage featuring lingerie, lounge, swim, travel capsule, cat accessories and good mood lifestyle.">
-      <nav class="hotspots" aria-label="MEMO sections">
-        <a class="spot shop" href="#shop" aria-label="Shop"></a>
-        <a class="spot travel" href="#travel" aria-label="Travel"></a>
-        <a class="spot swim" href="#swim" aria-label="Swim and Resort"></a>
-        <a class="spot objects" href="#objects" aria-label="Objects"></a>
-        <a class="spot club" href="#club" aria-label="Join MEMO Club"></a>
-      </nav>
+  <div class="promo">
+    <span>♡ FREE SHIPPING OVER $79</span>
+    <span>A BRIGHTER YOU, EVERYWHERE ♡</span>
+    <span>SAME CAT · DIFFERENT MOOD</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MEMO home">
+      <span class="brand-word">MEMO</span>
+      <span class="brand-sub">MEMORY OF THE UNIVERSE</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#shop">SHOP</a>
+      <a href="#lingerie">LINGERIE</a>
+      <a href="#lounge">LOUNGEWEAR</a>
+      <a href="#swim">SWIM</a>
+      <a href="#travel">TRAVEL</a>
+      <a href="#objects">ACCESSORIES</a>
+      <a href="#world">OUR WORLD</a>
+    </nav>
+    <div class="header-actions">
+      <button type="button" aria-label="Search">⌕</button>
+      <button type="button" aria-label="Wishlist">♡</button>
+      <button class="bag-btn" type="button" data-open-cart>BAG · <span data-cart-count>0</span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media media-fallback">
+        <img src="assets/campaign/memo-01.jpg" alt="MEMO Mediterranean campaign" data-campaign="1">
+      </div>
+      <div class="hero-copy">
+        <p class="script">Good Outfits.<br>Brighter Days. ♡</p>
+        <h1>Wear Your<br><em>Good Mood.</em></h1>
+        <p class="hero-lead">A brighter you, everywhere. Lingerie · Loungewear · Swim · Travel · Lifestyle.</p>
+        <a class="pill pink-pill" href="#shop">SHOP NEW ARRIVALS →</a>
+      </div>
+      <div class="hero-stamp">
+        <img src="assets/memo-cat.svg" alt="">
+        <span>MEMO<br>GOOD MOOD CLUB</span>
+      </div>
     </section>
 
-    <section class="below" id="shop">
-      <div><span>MEMO</span><h1>Good outfits.<br><em>Brighter days.</em></h1></div>
-      <p>The live site now follows the approved MEMO visual system rather than generic gradients or stock photography.</p>
+    <section class="benefits" aria-label="MEMO benefits">
+      <article><b>🎀 Premium Fabrics</b><span>Soft on skin</span></article>
+      <article><b>☀ All-Day Comfort</b><span>All places</span></article>
+      <article><b>✈ Travel Ready</b><span>Home anywhere</span></article>
+      <article><b>♡ Designed for Real Women</b><span>Young at heart</span></article>
+      <article><b>🐱 A Kinder, Happier Planet</b><span>And cats!</span></article>
     </section>
 
-    <section class="links">
-      <a id="travel" href="#top">TRAVEL CAPSULE</a>
-      <a id="swim" href="#top">SWIM & RESORT</a>
-      <a id="objects" href="#top">OBJECTS</a>
-      <a id="club" href="mailto:hello@memo.saga100.com">JOIN MEMO CLUB</a>
+    <section class="shop-by-mood" id="shop">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SHOP BY MOOD</p>
+          <h2>Same girl.<br><em>Different scenery.</em></h2>
+        </div>
+        <p>Peach pink is the master signal, not the whole wardrobe. Mix rose, lilac, pool blue, mint, butter and cream — then finish with one MEMO detail.</p>
+      </div>
+
+      <div class="mood-grid">
+        <a class="mood-card" id="lingerie" href="#new">
+          <img src="assets/campaign/memo-02.jpg" alt="MEMO lingerie mood">
+          <div><h3>Lingerie</h3><p>Soft. Bold. Playful. Yours.</p><span>→</span></div>
+        </a>
+        <a class="mood-card" id="lounge" href="#new">
+          <img src="assets/campaign/memo-03.jpg" alt="MEMO lounge mood">
+          <div><h3>Silk & Lounge</h3><p>Comfort looks good on you.</p><span>→</span></div>
+        </a>
+        <a class="mood-card" href="#business">
+          <img src="assets/campaign/memo-04.jpg" alt="MEMO business to bar mood">
+          <div><h3>Business → Bar</h3><p>One look. More possibilities.</p><span>→</span></div>
+        </a>
+        <a class="mood-card" href="#travel">
+          <img src="assets/campaign/memo-05.jpg" alt="MEMO travel mood">
+          <div><h3>Travel Capsule</h3><p>Outfits for everywhere.</p><span>→</span></div>
+        </a>
+        <a class="mood-card" id="swim" href="#resort">
+          <img src="assets/campaign/memo-06.jpg" alt="MEMO swim mood">
+          <div><h3>Swim & Resort</h3><p>Sun. Salt. Self Love.</p><span>→</span></div>
+        </a>
+        <a class="mood-card" id="objects" href="#objects-feature">
+          <img src="assets/campaign/memo-07.jpg" alt="MEMO accessories">
+          <div><h3>Objects</h3><p>Little things. Brighter days.</p><span>→</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="new-arrivals" id="new">
+      <div class="product-heading">
+        <div><p class="eyebrow">NEW ARRIVALS</p><h2>Fresh moods for a brighter you.</h2></div>
+        <div class="filters" role="group" aria-label="Product filters">
+          <button class="filter active" data-filter="all">ALL</button>
+          <button class="filter" data-filter="lingerie">LINGERIE</button>
+          <button class="filter" data-filter="lounge">LOUNGEWEAR</button>
+          <button class="filter" data-filter="swim">SWIM</button>
+          <button class="filter" data-filter="objects">ACCESSORIES</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="lingerie">
+          <div class="product-art rose">
+            <div class="bra-drawing"><i></i><i></i><b>⋈</b></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Scallop Bow Bra Set</h3><strong>$49</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Scallop Bow Bra Set" data-price="49">ADD +</button></div>
+        </article>
+        <article class="product-card" data-category="lounge">
+          <div class="product-art pinkprint">
+            <div class="pj-drawing"><span></span><span></span></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Kitty Charm PJ Set</h3><strong>$79</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Kitty Charm PJ Set" data-price="79">ADD +</button></div>
+        </article>
+        <article class="product-card" data-category="swim">
+          <div class="product-art pool">
+            <div class="onepiece-drawing"></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Ribbon One-piece</h3><strong>$89</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Ribbon One-piece" data-price="89">ADD +</button></div>
+        </article>
+        <article class="product-card" data-category="lingerie">
+          <div class="product-art hotpink">
+            <div class="bra-drawing ruffle"><i></i><i></i><b>♡</b></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Ruffle Bikini Set</h3><strong>$64</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Ruffle Bikini Set" data-price="64">ADD +</button></div>
+        </article>
+        <article class="product-card" data-category="lounge">
+          <div class="product-art peach">
+            <div class="dress-drawing"></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Rose Garden Slip Dress</h3><strong>$88</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Rose Garden Slip Dress" data-price="88">ADD +</button></div>
+        </article>
+        <article class="product-card" data-category="lounge">
+          <div class="product-art rose">
+            <div class="robe-drawing"></div>
+            <button class="heart" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-info"><h3>Dreamy Kimono Robe</h3><strong>$92</strong><div class="dots"><i></i><i></i><i></i></div><button class="add" data-add="Dreamy Kimono Robe" data-price="92">ADD +</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="feature-row" id="travel">
+      <article class="feature-card travel-card media-fallback">
+        <img src="assets/campaign/memo-08.jpg" alt="MEMO Travel Capsule">
+        <div class="feature-copy light">
+          <p class="eyebrow">MEMO TRAVEL CAPSULE</p>
+          <h2>Lighter bags.<br>Brighter days.</h2>
+          <p>From beach to city. One collection, many moods.</p>
+          <a class="pill" href="#club">EXPLORE THE COLLECTION →</a>
+        </div>
+      </article>
+      <article class="feature-card resort-card media-fallback" id="resort">
+        <img src="assets/campaign/memo-09.jpg" alt="MEMO Pool Good Mood Club">
+        <div class="feature-copy">
+          <p class="script small-script">Sun.<br>Salt.<br>Self Love ♡</p>
+          <a class="pill pink-pill" href="#new">SHOP SWIM →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="story-grid">
+      <article class="story-card media-fallback" id="business">
+        <img src="assets/campaign/memo-10.jpg" alt="MEMO Business to Bar">
+        <div class="story-copy">
+          <p class="eyebrow">BUSINESS → BAR</p>
+          <h2>Meetings.<br>Martinis.<br><em>And everything in between.</em></h2>
+          <a href="#new">SHOP THE EDIT →</a>
+        </div>
+      </article>
+      <article class="story-card objects-story media-fallback" id="objects-feature">
+        <img src="assets/campaign/memo-11.jpg" alt="MEMO objects and cat accessories">
+        <div class="story-copy">
+          <p class="eyebrow">OBJECTS</p>
+          <h2>Little things.<br><em>A brighter you.</em></h2>
+          <p>Cat charms · bows · pouches · travel bags · tiny gold hardware.</p>
+          <a href="#club">SHOP OBJECTS →</a>
+        </div>
+      </article>
+      <article class="story-card world-story media-fallback" id="world">
+        <img src="assets/campaign/memo-12.jpg" alt="MEMO lifestyle world">
+        <div class="story-copy">
+          <p class="eyebrow">OUR WORLD</p>
+          <h2>More love.<br><em>More life.</em></h2>
+          <p>Same cat. Different beaches. Different moods. Same gorgeous you.</p>
+          <a href="#club">JOIN THE WORLD →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="detail-strip">
+      <article><span>🎀</span><b>ICONIC DETAILS</b><p>Bows · Cat Charms · Scallops</p></article>
+      <article><span>✦</span><b>PREMIUM FABRICS</b><p>Silky soft · Breezy comfortable</p></article>
+      <article><span>✈</span><b>MADE FOR REAL LIFE</b><p>Home · Travel · Anywhere</p></article>
+      <article><span>♡</span><b>PLAYFUL ELEGANCE</b><p>One memorable detail per look</p></article>
+    </section>
+
+    <section class="club" id="club">
+      <div>
+        <p class="script">Join the<br>Good Mood Club ♡</p>
+        <h2>New arrivals first.<br>Special offers later.</h2>
+      </div>
+      <form id="clubForm">
+        <label for="clubEmail">EMAIL</label>
+        <div class="email-row">
+          <input id="clubEmail" type="email" placeholder="Your email here" required>
+          <button type="submit" aria-label="Join">→</button>
+        </div>
+        <small id="clubStatus">Exclusive access · New arrivals · A brighter you</small>
+      </form>
     </section>
   </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-word">MEMO</span><span class="brand-sub">MEMORY OF THE UNIVERSE</span></div>
+    <nav><a href="#shop">SHOP</a><a href="#travel">TRAVEL</a><a href="#world">OUR WORLD</a><a href="#club">CONTACT</a></nav>
+    <p>© 2026 MEMO · A BRIGHTER YOU, EVERYWHERE.</p>
+  </footer>
+
+  <div class="cart-overlay" data-close-cart></div>
+  <aside class="cart-drawer" aria-label="Shopping bag">
+    <header><h2>Your Bag</h2><button data-close-cart aria-label="Close">×</button></header>
+    <div class="cart-items" data-cart-items><p class="empty">Your bag is waiting for a good mood ♡</p></div>
+    <div class="cart-foot"><div><span>Total</span><strong data-cart-total>$0</strong></div><button type="button">CHECKOUT PREVIEW →</button><small>Preview storefront — no payment is charged yet.</small></div>
+  </aside>
+
+  <script src="app.js"></script>
 </body>
 </html>
