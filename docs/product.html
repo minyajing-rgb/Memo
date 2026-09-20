@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><title>MEMO Product</title>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"></head><body>
+  <div class="promo"><span>♡ FREE SHIPPING OVER $79</span><span>A BRIGHTER YOU, EVERYWHERE ♡</span><span>SAME CAT · DIFFERENT MOOD</span></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-word">MEMO</span><span class="brand-sub">MEMORY OF THE UNIVERSE</span></a>
+    <button class="menu-toggle" type="button" aria-label="Open menu">☰</button>
+    <nav class="nav"><a href="shop.html">SHOP</a><a href="shop.html?cat=lingerie">LINGERIE</a><a href="shop.html?cat=lounge">LOUNGEWEAR</a><a href="shop.html?cat=swim">SWIM</a><a href="travel.html">TRAVEL</a><a href="index.html#objects">ACCESSORIES</a><a href="index.html#world">OUR WORLD</a></nav>
+    <div class="header-actions"><button aria-label="Wishlist">♡</button><button class="bag-btn" type="button" data-open-cart>BAG · <span data-cart-count>0</span></button></div>
+  </header>
+<main class="product-page">
+  <div class="breadcrumbs" style="padding-left:0">HOME / SHOP / <span data-p-cat></span></div>
+  <div class="product-layout">
+    <div class="product-gallery" data-p-gallery></div>
+    <div class="product-detail-copy">
+      <p class="eyebrow" data-p-cat></p>
+      <h1 data-p-name></h1>
+      <div class="price" data-p-price></div>
+      <p class="desc" data-p-desc></p>
+      <p class="option-title">MATERIAL</p><p class="desc" data-p-material></p>
+      <p class="option-title">COLOR</p><div class="option-row" data-p-colors></div>
+      <p class="option-title">SIZE</p><div class="option-row" data-p-sizes></div>
+      <button class="add-main" data-p-add>ADD TO BAG →</button>
+      <div class="product-notes"><div>SOFT FIT</div><div>TRAVEL READY</div><div>MEMO DETAIL</div></div>
+      <p style="margin-top:20px"><a href="size-guide.html" style="font-size:10px;text-decoration:underline">SIZE GUIDE</a></p>
+    </div>
+  </div>
+</main>
+  <div class="cart-overlay" data-close-cart></div>
+  <aside class="cart-drawer"><header><h2>Your Bag</h2><button data-close-cart>×</button></header><div class="cart-items" data-cart-items><p class="empty">Your bag is waiting for a good mood ♡</p></div><div class="cart-foot"><div><span>Total</span><strong data-cart-total>$0</strong></div><button type="button">CHECKOUT PREVIEW →</button><small>Preview storefront — no payment is charged yet.</small></div></aside>
+  <script src="app.js"></script><script src="product.js"></script></body></html>
