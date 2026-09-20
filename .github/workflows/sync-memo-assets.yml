@@ -48,9 +48,14 @@ jobs:
                   im = Image.open(io.BytesIO(data)).convert("RGB")
                   w, h = im.size
                   ratio = w / h
-                  # MEMO generated editorial images are predominantly large portrait 4:5-ish images.
-                  if w >= 750 and h >= 900 and 0.72 <= ratio <= 0.86 and len(data) >= 35000:
-                      score = (1 - abs(ratio - 0.80)) * 100000 + w*h/1000 + len(data)/1000
+                  # Keep high-quality fashion/editorial images. Strongly prefer 4:5-ish
+                  # portrait MEMO generations, while retaining a few large landscape/detail
+                  # assets so the website can use them as feature banners.
+                  if w >= 500 and h >= 500 and len(data) >= 20000:
+                      portrait_bonus = 5_000_000 if 0.72 <= ratio <= 0.86 else 0
+                      landscape_bonus = 1_500_000 if 1.15 <= ratio <= 1.65 else 0
+                      square_bonus = 500_000 if 0.90 <= ratio <= 1.10 else 0
+                      score = portrait_bonus + landscape_bonus + square_bonus + (w*h) + len(data)
                       candidates.append((score, im, url, (w, h)))
               except Exception:
                   pass
