@@ -1,0 +1,274 @@
+{
+  "version": "memo-locked-20260920",
+  "selected_file": "4e10bbe7-7fb1-40b3-9ca0-fbbb60d69e7b.png",
+  "source_size": [
+    1024,
+    1536
+  ],
+  "source_rgb_sha256": "8d72d82ed792d89d8c139e264c1681eedc82019d337f638564a2120ebd28d8ec",
+  "source_path": "brand/approved/website-reference.png",
+  "source_status": "user-selected; verified identical RGB pixels",
+  "encoding": "lossless WebP; native dimensions; no upscaling",
+  "assets": [
+    {
+      "file": "docs/assets/locked/hero-desktop.webp",
+      "crop": [
+        0,
+        90,
+        1024,
+        503
+      ],
+      "width": 1024,
+      "height": 413,
+      "bytes": 605044,
+      "sha256": "66b59ad0726263bfe08af83c9f2281143ee40639869701f12de6c321e96afe02"
+    },
+    {
+      "file": "docs/assets/locked/hero-mobile.webp",
+      "crop": [
+        235,
+        90,
+        850,
+        503
+      ],
+      "width": 615,
+      "height": 413,
+      "bytes": 355340,
+      "sha256": "1927b62e222541a115cb2daf831dfef04b9d38080d874069997ff65a8e2980f7"
+    },
+    {
+      "file": "docs/assets/locked/cat-lingerie.webp",
+      "crop": [
+        4,
+        506,
+        170,
+        671
+      ],
+      "width": 166,
+      "height": 165,
+      "bytes": 44064,
+      "sha256": "419a7bbb851eb8f907640144c09becef17b506bb588b4628cbce2f85ef2451af"
+    },
+    {
+      "file": "docs/assets/locked/cat-lounge.webp",
+      "crop": [
+        175,
+        506,
+        338,
+        671
+      ],
+      "width": 163,
+      "height": 165,
+      "bytes": 45658,
+      "sha256": "0cc07276e63dad03bca90d27cc63db00cf549e771a2139b408014e5818ab4023"
+    },
+    {
+      "file": "docs/assets/locked/cat-business.webp",
+      "crop": [
+        344,
+        506,
+        509,
+        671
+      ],
+      "width": 165,
+      "height": 165,
+      "bytes": 41732,
+      "sha256": "6ee28c66244e375c269135f157cd8bc4681e38eea3b71673256c186b17dac5d1"
+    },
+    {
+      "file": "docs/assets/locked/cat-travel.webp",
+      "crop": [
+        515,
+        506,
+        677,
+        671
+      ],
+      "width": 162,
+      "height": 165,
+      "bytes": 42896,
+      "sha256": "cf7c7e57fcc8f9dc2e199f49fb32ddb32cfa79da9e7044aa0d62561dc0d8a846"
+    },
+    {
+      "file": "docs/assets/locked/cat-swim.webp",
+      "crop": [
+        684,
+        506,
+        849,
+        671
+      ],
+      "width": 165,
+      "height": 165,
+      "bytes": 45626,
+      "sha256": "076975c427379b07b8cd22b7eacf44898a0f2271685bad2953c95ca609ee1c4f"
+    },
+    {
+      "file": "docs/assets/locked/cat-objects.webp",
+      "crop": [
+        855,
+        506,
+        1021,
+        671
+      ],
+      "width": 166,
+      "height": 165,
+      "bytes": 48348,
+      "sha256": "900853cb5239a725277a82ac1518839c703107412cf9b0470557b6e0c58d7bf9"
+    },
+    {
+      "file": "docs/assets/locked/product-bra.webp",
+      "crop": [
+        30,
+        770,
+        182,
+        931
+      ],
+      "width": 152,
+      "height": 161,
+      "bytes": 23980,
+      "sha256": "85eff94e2dba5839fc8644627e1922f23f0edef550249e0c7ca5aa3394ae03d6"
+    },
+    {
+      "file": "docs/assets/locked/product-pajamas.webp",
+      "crop": [
+        188,
+        770,
+        344,
+        931
+      ],
+      "width": 156,
+      "height": 161,
+      "bytes": 30350,
+      "sha256": "3f6bf00b65d90bf5ba12732f7e944975a1e1e176a4a16dcf69b2dcce76dec7a7"
+    },
+    {
+      "file": "docs/assets/locked/product-onepiece.webp",
+      "crop": [
+        350,
+        770,
+        508,
+        931
+      ],
+      "width": 158,
+      "height": 161,
+      "bytes": 21454,
+      "sha256": "df520b83fa1ca1e8f3d1614441c795e3749d0aa07b1a9e2f0689988e76233d25"
+    },
+    {
+      "file": "docs/assets/locked/product-bikini.webp",
+      "crop": [
+        515,
+        770,
+        671,
+        931
+      ],
+      "width": 156,
+      "height": 161,
+      "bytes": 23444,
+      "sha256": "af0a0c4450be845f26037d62736b70e0487e0fde151def8d5a1b928562f4a38d"
+    },
+    {
+      "file": "docs/assets/locked/product-dress.webp",
+      "crop": [
+        677,
+        770,
+        834,
+        931
+      ],
+      "width": 157,
+      "height": 161,
+      "bytes": 28528,
+      "sha256": "755c67187191baea6b5e2470304ea2ac91ab316cd9ead2dd84801870bab6306d"
+    },
+    {
+      "file": "docs/assets/locked/product-robe.webp",
+      "crop": [
+        840,
+        770,
+        993,
+        931
+      ],
+      "width": 153,
+      "height": 161,
+      "bytes": 31332,
+      "sha256": "880380fa75913adc757793cac7f8134ca5198518200d80163f8ae76d471bb511"
+    },
+    {
+      "file": "docs/assets/locked/feature-travel.webp",
+      "crop": [
+        0,
+        1004,
+        622,
+        1233
+      ],
+      "width": 622,
+      "height": 229,
+      "bytes": 201388,
+      "sha256": "a568350f91474ccb01a65dbbda4561ef5b4c209b78bc4ada953d82a88506f4de"
+    },
+    {
+      "file": "docs/assets/locked/feature-swim.webp",
+      "crop": [
+        631,
+        1004,
+        1024,
+        1233
+      ],
+      "width": 393,
+      "height": 229,
+      "bytes": 139340,
+      "sha256": "18f463bfa67a955b867ab26a0650be98deb8577aa3d4750bd194f51c47ad5c30"
+    },
+    {
+      "file": "docs/assets/locked/world-strip.webp",
+      "crop": [
+        0,
+        1287,
+        1024,
+        1432
+      ],
+      "width": 1024,
+      "height": 145,
+      "bytes": 232440,
+      "sha256": "0c48b4c0375cb3a6aa752362ac9ff0062c134106d0bac0c266d6e46e094837e4"
+    },
+    {
+      "file": "docs/assets/locked/cat-portrait.webp",
+      "crop": [
+        5,
+        335,
+        255,
+        503
+      ],
+      "width": 250,
+      "height": 168,
+      "bytes": 59434,
+      "sha256": "3c1a2458c9a514628fc95b0fea589937f95190b0b10eb4db2b31a50eedfab5a0"
+    },
+    {
+      "file": "docs/assets/locked/logo-cat.webp",
+      "crop": [
+        171,
+        37,
+        235,
+        89
+      ],
+      "width": 64,
+      "height": 52,
+      "bytes": 3456,
+      "sha256": "32c5d6adef83590bd9f42552eed89bb2a207915fa25f1e7e5a40f72fc272e180"
+    },
+    {
+      "file": "docs/assets/locked/footer-cat.webp",
+      "crop": [
+        133,
+        1328,
+        196,
+        1425
+      ],
+      "width": 63,
+      "height": 97,
+      "bytes": 8690,
+      "sha256": "81e85fb090443288d6205a21ab3ac68e7896ea3abca2a4dcf429b965f943bcd8"
+    }
+  ]
+}
