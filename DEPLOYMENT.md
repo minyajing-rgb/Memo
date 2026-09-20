@@ -1,46 +1,17 @@
-# MEMO Production Deployment
+# MEMO website deployment
 
-## Hosting decision
+Live domain: https://memo.saga1001.com/
+Hosting: GitHub Pages, main branch, /docs directory.
+Alibaba Cloud is DNS only. Do not move to Base44 or Vercel.
 
-**Brand/source archive:** GitHub private repository `minyajing-rgb/Memo`  
-**Live website host:** Base44  
-**Base44 app:** `MEMO` / `6aae67beb0e43ded2c70db4b`
+Build: python scripts/prepare_assets.py && python scripts/build_site.py
+Shared styles and interactions: docs/site.css, docs/site.js
+Exact artwork: brand/approved/website-reference.png
+Web assets: docs/assets/locked/
 
-Reason:
-- keep the GitHub repository private
-- use Base44 for public hosting, future commerce/backend, and custom-domain binding
-- avoid GitHub Pages plan/visibility restrictions
-- avoid using GitHub Pages as the production host for an ecommerce-oriented site
+Current release: locked-20260920-r1
+Pages: home, collection, product details, travel, world, wishlist, bag, fit notes, contact, preview/privacy, 404.
 
-## Current Base44 website
+Commerce status: frontend collection preview only. No real payments, orders or email subscription backend. Prices, colours and sizes are concepts pending final production confirmation.
 
-The Base44 version has been rebuilt as the active website implementation with:
-- 24-hour soft wardrobe positioning
-- Home / Shop system
-- Inner → Outer
-- Silk & Lounge
-- Business → Bar
-- Travel capsule
-- Swim & Resort
-- MEMO Men
-- MEMO Fortune / 桃花双开
-- Variable Cat / Memory of the Universe brand world
-- front-end shopping bag prototype
-- responsive layout
-
-## Production flow
-
-1. Continue product/brand source documentation in this GitHub repository.
-2. Use Base44 app `6aae67beb0e43ded2c70db4b` as the production website.
-3. Publish from the Base44 dashboard.
-4. Bind the final custom domain in Base44.
-5. Add commerce integrations after merchant setup:
-   - Stripe
-   - CRM / email capture
-   - analytics
-   - inventory / order flow
-   - legal pages
-
-## Domain
-
-Final domain is not yet locked in this file. Once chosen, add it in Base44 custom-domain settings and update the canonical/SEO values in the website.
+Acceptance: check real browser rendering and interactions, not just GitHub workflow status. Never replace the approved assets by image search, CSS clothing drawings or unrelated stock.
