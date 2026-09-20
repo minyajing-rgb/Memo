@@ -2,56 +2,45 @@
 
 ## Hosting decision
 
-**Source of truth:** GitHub private repository `minyajing-rgb/Memo`  
-**Production hosting:** Vercel  
-**Reason:** keep the code private while still getting automatic deploys and custom-domain support.
+**Brand/source archive:** GitHub private repository `minyajing-rgb/Memo`  
+**Live website host:** Base44  
+**Base44 app:** `MEMO` / `6aae67beb0e43ded2c70db4b`
 
-## Repository status
+Reason:
+- keep the GitHub repository private
+- use Base44 for public hosting, future commerce/backend, and custom-domain binding
+- avoid GitHub Pages plan/visibility restrictions
+- avoid using GitHub Pages as the production host for an ecommerce-oriented site
 
-The production-ready static website is already in the repository root:
+## Current Base44 website
 
-- `index.html` — Home
-- `shop.html` — Catalog + filters + size/color selection + cart
-- `travel.html` — Travel capsule
-- `men.html` — MEMO Men
-- `fortune.html` — Fortune Edition
-- `world.html` — Our World
-- `styles.css` — shared design system
-- `script.js` — shared navigation
-- `catalog.js` — product data
-- `cart.js` — local cart
-- `assets/` — MEMO SVG assets
-- `vercel.json` — Vercel config
+The Base44 version has been rebuilt as the active website implementation with:
+- 24-hour soft wardrobe positioning
+- Home / Shop system
+- Inner → Outer
+- Silk & Lounge
+- Business → Bar
+- Travel capsule
+- Swim & Resort
+- MEMO Men
+- MEMO Fortune / 桃花双开
+- Variable Cat / Memory of the Universe brand world
+- front-end shopping bag prototype
+- responsive layout
 
-## Vercel import
+## Production flow
 
-Import this GitHub repository directly in Vercel:
+1. Continue product/brand source documentation in this GitHub repository.
+2. Use Base44 app `6aae67beb0e43ded2c70db4b` as the production website.
+3. Publish from the Base44 dashboard.
+4. Bind the final custom domain in Base44.
+5. Add commerce integrations after merchant setup:
+   - Stripe
+   - CRM / email capture
+   - analytics
+   - inventory / order flow
+   - legal pages
 
-**Repository:** `minyajing-rgb/Memo`
+## Domain
 
-Recommended settings:
-- Framework preset: **Other**
-- Root directory: **./**
-- Build command: **None**
-- Output directory: **./**
-- Production branch: **main**
-
-After import, every push to `main` will redeploy automatically.
-
-## Custom domain
-
-After the project is live:
-1. Add the chosen production domain in **Vercel → Project → Settings → Domains**.
-2. Update DNS at the domain provider using the exact Vercel records shown there.
-3. Keep GitHub as the source of truth; do not move the site to another builder.
-
-## Commerce status
-
-The current site includes a working front-end catalog and cart prototype. It does **not** charge money yet.
-
-Next production integrations:
-- Stripe Checkout / Payment Links
-- CRM / email capture
-- Analytics
-- inventory source
-- privacy / terms / shipping / returns
+Final domain is not yet locked in this file. Once chosen, add it in Base44 custom-domain settings and update the canonical/SEO values in the website.
