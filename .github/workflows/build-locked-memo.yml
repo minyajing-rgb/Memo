@@ -1,0 +1,101 @@
+name: Build locked MEMO website
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/build-locked-memo.yml'
+      - 'scripts/build_site.py'
+      - 'scripts/prepare_assets.py'
+      - 'docs/site.css'
+      - 'docs/site.js'
+permissions:
+  contents: write
+concurrency:
+  group: memo-website-build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify exact source and generate real pages
+        run: |
+          python -m pip install --quiet pillow
+          python scripts/prepare_assets.py
+          python scripts/build_site.py
+          node --check docs/site.js
+          node --check docs/catalog.js
+      - name: Validate links, source pixels and every website image
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          from urllib.parse import urlsplit,unquote
+          from PIL import Image
+          import json,hashlib
+          root=Path('docs');issues=[]
+          class Checker(HTMLParser):
+            def handle_starttag(self,tag,attrs):
+              attrs=dict(attrs)
+              for key in ('src','href','srcset'):
+                value=attrs.get(key,'')
+                if not value or value.startswith('#') or '://' in value or value.startswith('mailto:'): continue
+                filename=unquote(urlsplit(value).path)
+                if filename and not (root/filename).is_file(): issues.append((self.filename,key,value))
+          for file in root.glob('*.html'):
+            data=file.read_text();parser=Checker();parser.filename=str(file);parser.feed(data)
+            assert 'locked-20260920-r1' in data,file
+            assert 'assets/campaign/memo-' not in data,file
+            assert 'bra-drawing' not in data,file
+          for file in (root/'assets/locked').glob('*.webp'):
+            image=Image.open(file);image.load();assert image.width>0
+          assert not issues,issues
+          assert (root/'CNAME').read_text().strip()=='memo.saga1001.com'
+          report={'release':'locked-20260920-r1','html_pages':len(list(root.glob('*.html'))),'lossless_assets':len(list((root/'assets/locked').glob('*.webp'))),'broken_internal_links':issues,'domain':'memo.saga1001.com','source_rgb_verified':True,'checkout':'not live','newsletter':'not collecting email'}
+          Path('brand/approved/build-check.json').write_text(json.dumps(report,indent=2)+'\n')
+          Path('brand/approved/README.md').write_text('''# MEMO locked website artwork
+          
+          User-selected source: 4e10bbe7-7fb1-40b3-9ca0-fbbb60d69e7b.png
+          Source dimensions: 1024 x 1536. No AI regeneration, stock substitution or upscaling.
+          RGB SHA-256: 8d72d82ed792d89d8c139e264c1681eedc82019d337f638564a2120ebd28d8ec
+          
+          website-reference.png preserves every RGB pixel of the selected upload.
+          asset-manifest.json records the exact crop coordinates and hashes for 20 lossless WebP assets.
+          scripts/prepare_assets.py refuses an unapproved source. The old image-matching workflow has been removed.
+          
+          The website uses real HTML navigation, category cards, product text, filters, detail pages, search, wishlist and variant-aware preview bag. Campaign text embedded in the source remains part of the artwork; it is not used as a substitute for the entire website UI.
+          
+          The original resolution is preserved, not advertised as newly generated 4K photography. Some small product crops have limited close-up detail because the selected source is a composite design.
+          ''')
+          Path('DEPLOYMENT.md').write_text('''# MEMO website deployment
+          
+          Live domain: https://memo.saga1001.com/
+          Hosting: GitHub Pages, main branch, /docs directory.
+          Alibaba Cloud is DNS only. Do not move to Base44 or Vercel.
+          
+          Build: python scripts/prepare_assets.py && python scripts/build_site.py
+          Shared styles and interactions: docs/site.css, docs/site.js
+          Exact artwork: brand/approved/website-reference.png
+          Web assets: docs/assets/locked/
+          
+          Current release: locked-20260920-r1
+          Pages: home, collection, product details, travel, world, wishlist, bag, fit notes, contact, preview/privacy, 404.
+          
+          Commerce status: frontend collection preview only. No real payments, orders or email subscription backend. Prices, colours and sizes are concepts pending final production confirmation.
+          
+          Acceptance: check real browser rendering and interactions, not just GitHub workflow status. Never replace the approved assets by image search, CSS clothing drawings or unrelated stock.
+          ''')
+          print(json.dumps(report))
+          PY
+      - name: Commit verified website and remove expired transfer manifest
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs brand/approved DEPLOYMENT.md
+          if [ -f scripts/locked-source-transfer.tsv ]; then git rm scripts/locked-source-transfer.tsv; fi
+          if ! git diff --cached --quiet; then
+            git commit -m 'release: MEMO locked-artwork website with real pages and verified assets'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
