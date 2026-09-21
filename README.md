@@ -71,3 +71,16 @@ The MEMO official site is now structured as a direct brand + commerce prototype:
 
 ### GitHub Pages note
 The workflow is present and triggers correctly, but the repository currently stops at the GitHub “Setup Pages” step. This is a repository/account Pages setting rather than a website-code error. See `GITHUB_PAGES_SETUP.md`.
+
+## MEMO Life Studio — Game
+
+The MEMO game prototype is tracked under `game/`.
+
+- `game/README.md` — product overview
+- `game/ART_DIRECTION.md` — visual master
+- `game/SYSTEM_MASTER.md` — gameplay/system architecture
+- `game/BASE44_IMPLEMENTATION.md` — Base44 implementation plan
+
+Current Base44 prototype:
+https://app.base44.com/apps/6ab0dfc1724f73a3c6753356/editor/preview
+
